@@ -167,7 +167,7 @@ void RotateBaseClockwise()
   Serial.write("RotateBaseClockwise - Current baseValue: ");
   Serial.println(String(currentBase));
   
-  if(currentBase < RotateBaseClockwise)
+  if(currentBase < 180)
   {
     baseServo.write(currentBase +1);
     currentBase++; 
@@ -179,7 +179,7 @@ void RotateBaseCounterClockwise()
   Serial.write("RotateBaseCounterClockwise - Current baseValue: ");
   Serial.println(String(currentBase));
   
-  if(currentBase > RotateBaseCounterClockwise)
+  if(currentBase > 0)
   {
     baseServo.write(currentBase -1);
     currentBase--; 
